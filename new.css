@@ -531,3 +531,7 @@ nav a, .site-header__icons-wrapper a {
     color: #3a3a3a !important;
     text-decoration: none !important;
 }
+
+#bcpo .selector-wrapper.bcpo-buttons:nth-child(2), #bcpo .selector-wrapper.bcpo-buttons:nth-child(4), #bcpo:not(.g-card) .bcpo-colors {
+    display: block !important;
+}
