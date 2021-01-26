@@ -1,24 +1,4 @@
-      Celestial.display({
-      form: false,
-      formFields: {download: true},
-      datapath: "https://ofrohn.github.io/data/",
-      timezoneid: "ZRIRA083HTIE",
-      background: {        // Background style
-        fill: "#000000",   // Area fill
-        opacity: 1, 
-        stroke: "#ffffff", // Outline
-        width: 2
-      },
-      stars: {
-        style: { fill: "#ffffff", opacity: 1 },
-      },  
-      constellations: {
-        lineStyle: { stroke: "#cccccc", width: 1, opacity: 0.6 }, 
-      }, 
-    });
-</script>
 
-<script type="text/javascript">
     var mapColor = '#000000';
   var starColor = '#ffffff';
   var order = Math.floor(Math.random()*20000 + 10000);
