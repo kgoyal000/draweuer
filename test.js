@@ -376,7 +376,7 @@ function change_shape(val){
   if(document.getElementById('cb61').checked){
     $('.editor-color-53 .cust').css('fill', '#ffffff')
     $('.bor').css('fill','#000000')
-    $('.strokeCouple').css('stroke','#000000')
+    $('.strokeCouple').css('stroke',mapColor)
   }else{
     $('.editor-color-53 .cust').css('fill', fcolor)
     $('.bor').css('fill','#ffffff')
