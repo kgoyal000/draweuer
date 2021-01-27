@@ -1,4 +1,4 @@
-
+  
     var mapColor = '#000000';
   var starColor = '#ffffff';
   var order = Math.floor(Math.random()*20000 + 10000);
@@ -186,8 +186,8 @@ function set_res_date(day,monthh,year){
     $('.editor-color-53 .cust').css('fill', '#ffffff')
     $('.custom-textarea').css('color', '#000000')
     if(document.getElementById('cb61').checked){
-      $('.bor').css('fill','#000000')
-      $('.strokeCouple').css('stroke', '#000000')
+      $('.bor').css('fill',mapColor)
+      $('.strokeCouple').css('stroke', mapColor)
     }else{
       $('.bor').css('fill', '#ffffff')
       $('.strokeCouple').css('stroke', '#ffffff')
@@ -197,6 +197,20 @@ function set_res_date(day,monthh,year){
   }
 
 }
+  
+  function font_change(id){
+  selectedFont = '"BoldFont1", sans-serif';
+  if(id == 'cb41'){ 
+    selectedFont = '"BoldFont3", serif'
+  }else if(id == 'cb42'){ 
+    selectedFont = '"BoldFont2", cursive';
+  }else{
+    selectedFont = '"BoldFont1", sans-serif';
+  }
+  font = id;
+  $('textarea.custom-textarea.w-100').css('font-family', selectedFont)
+}
+  
 function change_background(color){
   console.log(color +'This is the color')
   $('#div_color').css('background',color)
@@ -234,8 +248,8 @@ function change_background(color){
 //     $('.frame_bc').css('background', '#ffffff')
 //     $('.editor-color-53 .cust').css('fill', '#ffffff')
     same_bc(false)
-        $('.bor').css('fill', '#000000')
-        $('.strokeCouple').css('stroke', '#000000')
+        $('.bor').css('fill', mapColor)
+        $('.strokeCouple').css('stroke', mapColor)
   }
 }
 
@@ -338,6 +352,31 @@ return longitudeCardinal
 return longitude;
 }
   
+ 
+  
+  function newLoc(){
+   var newlat = $('input#mat-input-8').val()
+   var newlng =   $('input#mat-input-9').val()
+    
+   var newlatCard = $('select#mat-input-19').val()
+   var newlngCard = $('select#mat-input-11').val()
+   
+   var newlat1 = newlat
+   var newlng1 = newlng
+   if(newlatCard == "S"){
+    newlat1 = -1 * newlat;
+   }
+    
+   if(newlngCard == "W"){
+   	 newlng1 = -1 * newlng;
+   }
+    
+    Celestial.location([newlat1, newlng1])
+    
+    $('#custom_lat').html(newlat+'˚ '+newlatCard)
+     $('#custom_lng').html(newlng+'˚ '+newlngCard)
+  }
+  
     var shapeName='Cerc';
 function change_shape(val){
   if(val.id == 'cb17'){
@@ -375,7 +414,7 @@ function change_shape(val){
  
   if(document.getElementById('cb61').checked){
     $('.editor-color-53 .cust').css('fill', '#ffffff')
-    $('.bor').css('fill','#000000')
+    $('.bor').css('fill',mapColor)
     $('.strokeCouple').css('stroke',mapColor)
   }else{
     $('.editor-color-53 .cust').css('fill', fcolor)
@@ -425,6 +464,14 @@ function show_border()
 }
 function changeTitle(val){
   $('#skyMap').html(val)
+}
+
+ function changeLocationData(val){
+  $('#custom_add').html(val)
+}
+  
+   function changeDateData(val){
+  $('#custom_date').html(val)
 }
   
     var lines = 4;
