@@ -254,27 +254,27 @@ function change_background(color){
 }
 
 function daytag(day){
-  var daytag = "th";
+  var daytag = "TH";
   if(day == 1 || day == 21 || day == 31){
-      daytag = "st";
+      daytag = "ST";
   }else if(day == 2 || day == 22){
-      daytag = "nd";
+      daytag = "ND";
   }else if(day == 3 || day == 23){
-      daytag = "rd";
+      daytag = "RD";
   }else{
-      daytag = "th";
+      daytag = "TH";
   }
   return daytag;
 }
 
 function timetag(hrs){
-  var timetag = "am";
+  var timetag = "AM";
   if(hrs > 12){
-    timetag = "pm";
+    timetag = "PM";
   }else if(hrs == 12){
-    timetag = "pm";
+    timetag = "PM";
   }else{
-    timetag = "am"
+    timetag = "AM"
   }
   return timetag;
 
