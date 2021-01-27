@@ -143,12 +143,12 @@ function set_res_date(day,monthh,year){
   if (!checkboxElem.checked) {
       unknownTimeChecked = true;
       $('#hr_form,#min_form').prop('disabled', true);
-      document.getElementById("hr_form").value = 00;
-      document.getElementById("min_form").value = 01;
-      $("#hr").val(document.getElementById("hr_form").value);
-      trigger_change_event("hr");
-      $("#min").val(document.getElementById("hr_form").value);
-      trigger_change_event("min");
+//       document.getElementById("hr_form").value = 00;
+//       document.getElementById("min_form").value = 01;
+//       $("#hr").val(document.getElementById("hr_form").value);
+//       trigger_change_event("hr");
+//       $("#min").val(document.getElementById("hr_form").value);
+//       trigger_change_event("min");
       $('#yes_no_time').css('display','none')
   } else {
       $('#yes_no_time').css('display','inline-block')
