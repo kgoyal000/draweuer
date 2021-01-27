@@ -169,13 +169,13 @@ function set_res_date(day,monthh,year){
     $('.custom-frame').css('color', starColor);
     $('.frame-container').css('color','3px solid '+starColor);
     $('.custom-textarea').css('color', starColor)
-    if(mapColor == '#ffffff'){
-      $('.bor').css('fill','#000000')
-      $('.strokeCouple').css('stroke','#000000')
-    }else{
+//     if(mapColor == '#ffffff'){
+//       $('.bor').css('fill','#000000')
+//       $('.strokeCouple').css('stroke','#000000')
+//     }else{
       $('.bor').css('fill', starColor)
       $('.strokeCouple').css('stroke', starColor)
-    }
+//     }
 //     fcolor = mapColor;
 //     tcolor = starColor;
   }else{
