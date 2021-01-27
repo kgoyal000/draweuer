@@ -46,7 +46,7 @@
 }
 
 function set_res_date(day,monthh,year){
-    var month_list = ['test','January','February','March','April','May','June','July','August','September','October','November','December'];
+    var month_list = ["test","JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"];
     month = month_list.indexOf(monthh);
     month_str = month;
     if(month<=9){
